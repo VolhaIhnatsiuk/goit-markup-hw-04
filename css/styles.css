@@ -149,6 +149,8 @@ img {
 */
 .header {
   border-bottom: 1px solid var(--border-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -362,7 +364,7 @@ img {
 }
 
 .description-team-card {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .team {
@@ -427,12 +429,11 @@ img {
 */
 
 .customers {
-  padding-bottom: 120px;
-  padding-right: 0;
-  padding-left: 0;
+  padding: 120px 0;
 }
 
 .customers-title {
+  line-height: 1.1;
   text-transform: capitalize;
 }
 
@@ -449,7 +450,7 @@ img {
   justify-content: center;
   align-items: center;
   width: 168px;
-  height: 80px;
+  height: 88px;
 
   color: var(--color-light-slate);
   border: 1px solid var(--color-light-slate);
@@ -473,6 +474,7 @@ img {
 */
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer {
@@ -508,7 +510,6 @@ img {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  /* margin-bottom: 0; */
 }
 
 .footer-socials-link {
@@ -531,12 +532,6 @@ img {
 .footer-icon {
   fill: currentColor;
 }
-
-/* .socials-link:hover,
-.socials-link:focus {
-  background-color: var(--active-txtbtn-color);
-}
-
 
 /**
   |============================
@@ -603,7 +598,11 @@ img {
   background: var(--color-white);
 }
 
-.project-card:hover {
+.project-card-link {
+  display: block;
+}
+
+.project-card-link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
