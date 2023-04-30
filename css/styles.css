@@ -228,8 +228,20 @@ img {
   |============================
 */
 .hero {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 188px 0;
+
   background-color: var(--secondary-text-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/hero-bg-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-container {
@@ -272,26 +284,40 @@ img {
 
 /**
   |============================
-  | Benefits section
+  | Features section
   |============================
 */
-.benefits {
+.features {
   padding: 120px 0;
 }
 
-.benefits-container {
+.features-container {
   display: flex;
 }
 
-.benefits-list .item {
+.features-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+
+  background: var(--color-cloud);
+  border-radius: 4px;
+}
+
+.features-icon {
+}
+
+.features-list .item {
   width: 264px;
 }
 
-.benefits-list .item:not(:last-child) {
+.features-list .item:not(:last-child) {
   margin-right: 24px;
 }
 
-.benefits-title {
+.features-title {
   margin-bottom: 8px;
 }
 
@@ -357,8 +383,87 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.team-section-text {
+  margin-bottom: 8px;
+}
+
 .align {
   text-align: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 0;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--logo-btn-color);
+  border-radius: 50%;
+  color: var(--color-cloud);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--active-txtbtn-color);
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
+/**
+  |============================
+  | Customers section
+  |============================
+*/
+
+.customers {
+  padding-bottom: 120px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.customers-title {
+  text-transform: capitalize;
+}
+
+.customers-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 0;
+}
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 80px;
+
+  color: var(--color-light-slate);
+  border: 1px solid var(--color-light-slate);
+  border-radius: 4px;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  color: var(--active-txtbtn-color);
+  border: 1px solid var(--active-txtbtn-color);
+}
+
+.customers-icon {
+  fill: currentColor;
 }
 
 /**
@@ -367,13 +472,25 @@ img {
   |============================
 */
 .footer-container {
-  width: 264px;
+  display: flex;
 }
 
 .footer {
   padding: 100px 0;
 
   background-color: var(--secondary-text-color);
+}
+
+.footer-left-side {
+  width: 264px;
+  margin-right: 120px;
+}
+
+.footer-socials-text {
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  color: var(--color-white);
 }
 
 .footer-logo-span,
@@ -385,6 +502,41 @@ img {
   display: inline-block;
   margin-bottom: 16px;
 }
+
+.footer-socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  /* margin-bottom: 0; */
+}
+
+.footer-socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--logo-btn-color);
+  border-radius: 50%;
+  color: var(--color-cloud);
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  background-color: var(--color-green);
+}
+
+.footer-icon {
+  fill: currentColor;
+}
+
+/* .socials-link:hover,
+.socials-link:focus {
+  background-color: var(--active-txtbtn-color);
+}
+
 
 /**
   |============================
@@ -410,7 +562,6 @@ img {
 .portfolio-button {
   padding: 12px 24px;
   border-radius: 4px;
-  /* min-height: 48px; */
 
   color: var(--logo-btn-color);
   background-color: var(--color-cloud);
@@ -450,4 +601,9 @@ img {
 
 .project-card {
   background: var(--color-white);
+}
+
+.project-card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
